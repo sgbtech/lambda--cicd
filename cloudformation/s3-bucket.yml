@@ -1,5 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 
+Descripyion: 's3 bucket with environment tagging'
+
 Parameters:
   Environment:
     Type: String
@@ -22,6 +24,6 @@ Resources:
 
     Outputs:
       BucketName:
-        Description: 'Name of created S3 Bucket'
+        Description: 'Name of the created S3 Bucket'
         Value: !Ref MyS3Bucket
     
