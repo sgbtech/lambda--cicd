@@ -5,6 +5,8 @@ on:
     paths:
       - 'cloudformation/**'
 
+  workflow_dispatch: 
+
 permissions:
   pull_requests: write
   contents: read
