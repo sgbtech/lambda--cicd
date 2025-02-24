@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'lambda/'
+      - 'lambda/**'
 
 jobs:
   deploy-lambda: # Name of our job
@@ -16,7 +16,7 @@ jobs:
     - name: Set Up Python # Sets up our python enviroment
       uses: actions/setup-python@v2
       with:
-        python-version: '3.11'
+        python-version: '3.12'
 
     - name: Install Dependencies # Installs any packages
       run: |
