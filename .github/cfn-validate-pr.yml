@@ -1,4 +1,4 @@
-name: Validate CloudFormation on Properties:
+name: Validate CloudFormation on Properties
 
 on:
   pull_request:
