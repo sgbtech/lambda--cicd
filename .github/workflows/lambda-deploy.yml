@@ -12,8 +12,8 @@ jobs:
   deploy-lambda:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      
+      - uses: actions/checkout@v2
 
       - name: Set Up Python
         uses: actions/setup-python@v2
