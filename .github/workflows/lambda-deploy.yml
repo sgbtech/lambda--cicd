@@ -35,3 +35,8 @@ jobs:
         cd lambda
         zip -r lambda.zip .
         aws lambda update-function-code --function-name my-test-cicd-lambda --zip-file fileb://lambda.zip
+
+    - name: Debug GitHub Actions
+      run: |
+        echo "Current directory: $(pwd)"
+        ls -R
