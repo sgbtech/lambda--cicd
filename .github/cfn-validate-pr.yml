@@ -1,12 +1,9 @@
 name: Validate CloudFormation on Properties
 
 on:
-  
   pull_request:
     paths:
       - 'cloudformation/**'
-
-  workflow_dispatch:
 
 permissions:
   pull_requests: write
