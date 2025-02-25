@@ -1,9 +1,11 @@
 AWSTemplateFormatVersion: '2010-09-09'
 
+Description: 's3 bucket with environment tagging'
+
 Parameters:
   Environment:
     Type: String
-    Dedault: test
+    Default: test
     AllowedValues:
       - test
       - staging
@@ -14,11 +16,14 @@ Resources:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
-    Tags: 
-      - Key: Environment
+      Tags: 
+        - Key: Environment
+          Value: !Ref Environment
+        - Key: Project
+          Value: GithubActionsTesting
 
-    Outputs:
-      BucketName:
-        Description: 'Name of created S3 Bucket'
-        Value: !Ref MyS3Bucket
+Outputs:
+  BucketName:
+    Description: 'Name of the created S3 Bucket'
+    Value: !Ref MyS3Bucket
     
